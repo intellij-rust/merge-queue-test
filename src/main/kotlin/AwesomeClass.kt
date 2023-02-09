@@ -1,4 +1,4 @@
-object SomeClass2 {
+object AwesomeClass {
     fun foo() {
         println("Hello, World!")
     }
