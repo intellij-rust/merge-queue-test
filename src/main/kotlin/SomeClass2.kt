@@ -1,5 +1,5 @@
 object SomeClass2 {
-    fun foo() {
+    fun hello() {
         println("Hello, World!")
     }
 }
