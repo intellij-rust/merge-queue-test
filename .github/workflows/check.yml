@@ -33,3 +33,10 @@ jobs:
               uses: gradle/gradle-build-action@v2
               with:
                   arguments: "check --continue -Pkotlin.incremental=false --no-daemon"
+
+    check-finish:
+        needs: [ check ]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Finish check
+              run: echo "Check finished successfully!"
