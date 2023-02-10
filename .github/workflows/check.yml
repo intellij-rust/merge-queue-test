@@ -14,7 +14,10 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-    check-plugin:
+    check:
+        strategy:
+            matrix:
+                version: [ 1, 2 ]
         runs-on: ubuntu-latest
         timeout-minutes: 120
         steps:
