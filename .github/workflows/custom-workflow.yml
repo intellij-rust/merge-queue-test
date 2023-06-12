@@ -1,0 +1,22 @@
+name: create changelog
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up git user
+        run: |
+          (cd intellij-rust.github.io; git config --local user.email "intellij.rust@gmail.com")
+          (cd intellij-rust.github.io; git config --local user.name "intellij-rust-bot")
+
+      - name: Make changes
+        run: |
+          echo -en "\n" >> src/main/kotlin/Main.kt
+          git add src/main/kotlin/Main.kt
+          git commit -m "Add empty line"
+          git push origin master
