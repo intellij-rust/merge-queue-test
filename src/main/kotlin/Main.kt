@@ -1,3 +1,2 @@
 fun main() {
-    SomeClass.hello()
 }
