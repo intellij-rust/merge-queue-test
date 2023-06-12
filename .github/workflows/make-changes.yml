@@ -11,10 +11,10 @@ jobs:
         with:
           token: ${{ secrets.BOT_TOKEN }}
 
-      - name: Set up git user
-        run: |
-          git config --local user.email "intellij.rust@gmail.com"
-          git config --local user.name "intellij-rust-bot"
+#      - name: Set up git user
+#        run: |
+#          git config --local user.email "intellij.rust@gmail.com"
+#          git config --local user.name "intellij-rust-bot"
 
       - name: Make changes
         run: |
